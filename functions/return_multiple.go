@@ -1,0 +1,1 @@
+package mainfunc foo() (int, int) {     return 5, 6}func main() {     baz, bar := foo()}// ---------------------- NOTE ----------------------// Multiple values are often used to// return an error value along with the result (x, err := f()),// or a boolean to indicate success (x, ok := f()).
