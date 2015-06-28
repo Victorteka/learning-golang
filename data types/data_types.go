@@ -11,7 +11,8 @@ func main() {
   // The compiler fails
 
   // my name
-  var name string = "Eugene Mutai"
+  // var name string = "Eugene Mutai"
+  name := "Eugene Mutai"
 
   // age
   var age int = 25
@@ -20,7 +21,7 @@ func main() {
   var how_handsome float64 = 8.75
 
   // arrays
-  loves := [5]string{"Apple Machines", "Cars", "Video Games", "Adventures", "Sci-fi series"}
+  fruits := [5]string{"apple", "oranges", "pinapple", "pears", "peaches"}
   count := [3]int{1,2,3}
 
   // object
@@ -32,7 +33,7 @@ func main() {
   // The other way of declaring an object
   // always has a comma in the last declaration
   // unlike JavaScript
-  var more_about_me = map[string]string{
+  more_about_me := map[string]string{
        "name": "Eugene Mutai",
       //  "age": "25",
       //  "location": "Woodley, Kilimani",
@@ -45,7 +46,7 @@ func main() {
   }
 
   fmt.Println("Learning" + count)
-  fmt.Println(name, age, how_handsome, loves)
+  fmt.Println(name, age, how_handsome, fruits)
   fmt.Println(aboutme["name"], more_about_me["name"])
   fmt.Println(count)
 
