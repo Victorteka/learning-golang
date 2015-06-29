@@ -10,12 +10,12 @@ package main
 import "fmt"
 
 // this is a comment
-// All functions start with the keyword func 
+// All functions start with the keyword func
 // followed by the name of the function (main in this case)
-func main(int i = 3) {
-    var a string = "Hello world!!"
-    b := "Do not stay at home."
+func main() {
+	var a string = "Hello world!!"
+	b := "Do not stay at home."
 
-    fmt.Println(a + b)
-    fmt.Println(true && false)
+	fmt.Println(a + b)
+	fmt.Println(true && false)
 }
