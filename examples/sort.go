@@ -23,6 +23,10 @@ func main() {
   kids := []Person{
     {"Jill",9},
     {"Jack",10},
+    {"Eugene",25},
+    {"Anna", 18},
+    {"Moses", 21},
+    {"Xena", 5},
   }
   sort.Sort(ByName(kids))
   fmt.Println(kids)
