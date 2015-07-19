@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	// "unicode/utf8"
+)
 
 // import "unicode/utf8"
 
@@ -8,8 +11,8 @@ func main() {
 	letter := "A"
 	alpha := "absdef"
 	fmt.Println([]rune(letter)[0])
-	fmt.Println([]rune(alpha)[2])
-	fmt.Printf("%c\n", []rune(alpha)[2])
+	fmt.Println([]rune(alpha)[0])
+	fmt.Printf("%c\n", []rune(alpha)[0])
 
 	// letter2 := "B"
 	// buf := make([]byte, 3)

@@ -1,13 +1,13 @@
 package main
 
 import (
-  "fmt"
-  "crypto/sha1"
+	"crypto/sha1"
+	"fmt"
 )
 
 func main() {
-  h := sha1.New()
-  h.Write([]byte("test"))
-  bs := h.Sum([]byte{})
-  fmt.Println(bs)
+	h := sha1.New()
+	h.Write([]byte("test"))
+	bs := h.Sum([]byte{})
+	fmt.Println(bs)
 }
