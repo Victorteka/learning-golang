@@ -6,8 +6,8 @@ package main
 
 import "fmt"
 
-func makeZero(point_back_to_var *int) {
-     *point_back_to_var = 0
+func makeZero(point_back_to_var_x *int) {
+     *point_back_to_var_x = 0
 }
 
 func main() {
