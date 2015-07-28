@@ -4,18 +4,43 @@ Go is an opinionated programming language initially developed by Google in 2007.
 
 Go can be statically compiled into a single executable binary, which could target a large number of operating systems (from Linux and Windows to Plan 9) and processors (i386, amd64 and ARM).
 
-In HappyPancake project we found that Golang was a good fit for developing event-driven backend services. Other contenders included Scala, C#, Haskell and Erlang.
-Here is how code can look like in Golang:
-
 ```go
-func (m *ContactsModule) handleList(r *ApiRequest) ApiResponse {
-    return NewObjectResponse(&ContactListModel{})
+package main
+
+// import "fmt"
+// import "math"
+// or
+import (
+  "math"
+  "fmt"
+)
+
+// structs are used to define new data types
+// shorter method
+// type Circle struct{ x, y, r float64}
+type Circle struct{
+  x float64
+  y float64
+  r float64
 }
 
-type ContactsModule struct{}
+// a method associated with a struct
+func getCircleArea(ci *Circle) (float64) {
+  return (math.Pi * ci.r * ci.r)
+}
 
-func (m *ContactsModule) Register(r Runtime) {
-    r.HandleApi("GET", "/contacts", m.handleList)
+// equivalent to `void main` in C
+func main() {
+  // var c Cicle;
+  // c := new(Circle) == {x: 0, y: 0, r: 0}
+  // Set the default value if values are not defined
+  // c := Circle{x: 0, y: 0, r: 5}
+  // or just:
+  c := Circle{0, 0, 5}
+
+  area := getCircleArea(&c)
+  fmt.Println(area)
+  fmt.Println(c)
 }
 ```
 
@@ -35,7 +60,6 @@ func (m *ContactsModule) Register(r Runtime) {
 
 - But it turned out that it is also a general programming language, useful for solving text-processing problems, making frontends, or even scripting-like applications.
 However Go is not suited for real-time software because of the garbage collection and automatic memory allocation.
-8The Way to Go
 
 - Go is used internally in Google for more and more heavy duty distributed applications; e.g. a part of Google Maps runs on Go.
 Real life examples of usage of Go in other organizations can be found at http://go-lang.cat-v.org/ organizations-using-go. Not all uses of Go are mentioned there, because many companies consider this as private information. An application has been build inside Go for a large storage area network (SAN).(See Chapter 21 for a discussion of a sample of current use cases).
